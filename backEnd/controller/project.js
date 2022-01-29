@@ -10,11 +10,12 @@ var controller={
         var params=req.body;
         project.user=params.user;
         project.email=params.email;
-        project.key=params.key;
+        project.keys=params.keys;
         project.save((err,projectStored)=>{
             if(err) return res.status(500).send({message:"error al guardar el documento"});
             if(!projectStored) return res.status(404).send({message:"no se pudo guardar el documento"});
-            return res.status(200).status({project,projectStored});
+
+            return res.status(200).send({project:projectStored});
         });
     }
 };
