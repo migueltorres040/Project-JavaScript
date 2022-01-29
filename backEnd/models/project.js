@@ -1,9 +1,9 @@
 'use strict'
 var mongoose=require('mongoose');
-var Schema=mongoose.Schema;
-var ProjectSchema=Schema({
+var Schemma=mongoose.Schema;
+var ProjectSchema=Schemma({
     user:String,
-    email:string,
-    key:string
+    email:String,
+    keys:String
 });
 module.exports=mongoose.model('project-javascript',ProjectSchema);
