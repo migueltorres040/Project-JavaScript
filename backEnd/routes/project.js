@@ -1,6 +1,6 @@
 'use strict'
 var express=require('express');
-const{route}=require('../app');
+const {route}=require('../app');
 var ProjectController=require('../controller/project');//llamo a los controladores
 var router=express.Router();
 
